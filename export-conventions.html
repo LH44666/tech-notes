@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archive Export Conventions (REF-1013-F)</title>
+</head>
+<body>
+<article>
+<h1>Archive Export Conventions (REF-1013-F)</h1>
+<p>This page (REF-1013-F) describes how documents leave the archive system, and how what comes back is reconciled afterwards.</p>
+
+<h2>Two-part export</h2>
+<p>An export leaves the system in two parts. The first part is the body description, a short account of what the document contains. The second part is the acknowledgement line, which is the entry the system reads when it closes a record.</p>
+
+<h2>What the acknowledgement line carries</h2>
+<p>The acknowledgement line carries the document number, a forward slash, and the current version. Those three together identify the record that a body description belongs to.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<tbody>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Document number</td><td>REF-1013-F</td></tr>
+<tr><td>Current version</td><td>V4</td></tr>
+<tr><td>Export mode</td><td>two-part</td></tr>
+</tbody>
+</table>
+
+<h2>Reconciliation</h2>
+<p>The body description is logged first. The acknowledgement line follows as a separate entry, and the two are paired afterwards.</p>
+<p>A body description that arrives on its own is logged as unmatched. Unmatched records stay open until the next review cycle, and a record still open after two cycles is flagged for manual review.</p>
+<p>The field naming here is the same convention the earlier notes use, and it is unchanged.</p>
+</article>
+</body>
+</html>
